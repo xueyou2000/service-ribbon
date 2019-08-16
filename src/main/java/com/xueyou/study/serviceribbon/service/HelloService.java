@@ -1,14 +1,10 @@
 package com.xueyou.study.serviceribbon.service;
 
-import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.netflix.hystrix.contrib.javanica.cache.annotation.CacheKey;
 import com.netflix.hystrix.contrib.javanica.cache.annotation.CacheRemove;
 import com.netflix.hystrix.contrib.javanica.cache.annotation.CacheResult;
-import com.netflix.hystrix.strategy.concurrency.HystrixRequestContext;
-import jdk.nashorn.internal.runtime.logging.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -41,7 +37,7 @@ public class HelloService {
         String result = restTemplate.getForObject("http://CLIENT/home", String.class);
         long end = System.currentTimeMillis();
         System.out.println("调用时间 : " + (end - start));
-        return  result;
+        return result;
     }
 
     // 清除缓存

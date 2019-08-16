@@ -1,10 +1,5 @@
 package com.xueyou.study.serviceribbon.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
 /**
  * 创建 by xueyo on 2019/8/14
  */
